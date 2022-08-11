@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=yes">
+  <title>Etch-a-Sketch</title>
+
+  <!-- add: css & icon -->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/02d5cf44c4.js" crossorigin="anonymous"></script>
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Etch-a-Sketch</h1>
+
+  <!-- USER CONTROL -->
+  <div class="container">
+
+    <!-- button collection -->
+    <div class="button-container">
+
+      <div id="color-box">
+        <!-- find colors here -->
+      </div>
+
+      <div class="btn" id="brush" type="button" >
+        <p>Brush</p>
+      </div>
+      <div class="btn" id="psychedelic" type="button">
+        <p>Psychedelic</p>
+      </div>
+      <div class="btn" id="shade" type="button">
+        <p>Shade</p>
+      </div>
+      <div class="btn" type="button" onclick="eraser()">
+        <p>Eraser</p>
+      </div>
+      <div class="btn clear-btn" type="button" onclick="clearMe()">
+        <p>Clear</p>
+      </div>
+
+      <div class="slide-container">
+        <p><strong>Dimensions: </strong></p>
+        <p><span id="demo"></span></p>
+        <input type="range" min="5" max="50" value="25" class="slider" id="myRange">
+      </div>
+
+    </div>
+
+    <!-- SKETCH PAD -->
+    <div id="sketch-pad">
+      <!-- add stuff here -->
+    </div>
+  </div>
+
+  <footer>
+    <p>Designed & coded by
+      <!-- <a href="https://graceavocado.com/" target="_blank">graceavocado</a> |  -->
+      <a href="https://github.com/grle" target="_blank">
+        <i class="fa-brands fa-github"></i> grle</a> &copy; 2022</p>
+  </footer>
+
+  <!-- javascript -->
+  <script src="script.js" charset="utf-8"></script>
+</body>
+
+</html>

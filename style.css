@@ -1,0 +1,165 @@
+:root {
+  --green-bold: #94B49F;
+  --green-soft: #CEE5D0;
+  --bg-color: #FCF8E8;
+  --emphasize-color: #ECB390;
+  --grey: #D3D3D3;
+  --draw: #808080;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Space Mono', monospace;
+}
+
+h1 {
+  text-align: center;
+}
+
+/********************** STYLE */
+.container {
+  display: flex;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container {
+  padding-right: 50px;
+}
+
+/********************** CONTROLS */
+.btn {
+  padding: 1px;
+  margin: 5px;
+  text-align: center;
+  /* color: white; */
+  background-color: var(--green-soft);
+  /* color: var(--green-soft); */
+  border: 1px solid var(--green-soft);
+  border-radius: 5px;
+  width: 150px;
+}
+
+.btn p {
+  margin: 5px;
+}
+
+.btn:hover {
+  background-color: var(--green-bold);
+  border: 1px solid var(--green-bold);
+  color: white;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+#color-box {
+  height: 50px;
+  width: 50px;
+  background-color: var(--draw);
+  border: 1px solid var(--grey);
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  cursor: pointer;
+}
+
+.clear-btn {
+  background-color: var(--emphasize-color);
+  border: 1px solid var(--emphasize-color);
+  color: white;
+}
+
+.clear-btn:hover {
+  background-color: white;
+  border: 1px solid var(--emphasize-color);
+  color: var(--emphasize-color);
+}
+
+/* SLIDER */
+
+.slide-container {
+  margin-top: 50px;
+}
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  background: var(--green-soft);
+  border-radius: 5px;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  border-radius: 50%;
+  border: 0;
+  background: var(--green-bold);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  border-radius: 50%;
+  border: 0;
+  background: var(--green-bold);
+  cursor: pointer;
+}
+
+/********************** SKETCH PAD */
+#sketch-pad {
+  border: 10px solid var(--green-bold);
+  /* border: 10px solid var(--emphasize-color); */
+  height: 500px;
+  width: 500px;
+  border-radius: 5px;
+  /* background-color: white; */
+  display: grid;
+}
+
+.grid-item {
+  border: 1px solid var(--grey);
+}
+
+/********************** DRAWING */
+.base {
+  background-color: white;
+}
+
+.hold {
+  background-color: var(--draw);
+}
+
+/* footer */
+footer {
+  text-align: center;
+}
+footer a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: var(--emphasize-color);
+  transition: .4s;
+}
+
+/* MEDIA */
+@media (max-width:800px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  #sketch-pad {
+    max-width: 300px;
+    max-height: 300px;
+    margin-bottom: 20px;
+  }
+  .button-container {
+    padding-right: 0px;
+  }
+}
