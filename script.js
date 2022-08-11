@@ -122,9 +122,3 @@ function clearMe() {
     item.style.backgroundColor = "white";
   });
 }
-
-const brush = document.getElementById("brush");
-
-brush.addEventListener("click", function onClick(event) {
-  //color select
-});
